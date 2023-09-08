@@ -15,7 +15,22 @@ public class Tr28_Zafra_Ex01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here\
+        Character Ayaka = new Character("Ayaka", 342, 'S');
+        Character Eula = new Character("Eula", 342, 'F');
+        Character Ganyu = new Character("Ganyu", 335, 'B');
+        
+        System.out.println("Name: " + Ayaka.name);
+        System.out.println("Attack Stat: " + Ayaka.attackStat);
+        System.out.println("Tier: " + Ayaka.tier);
+        
+        System.out.println("Name: " + Eula.name);
+        System.out.println("Attack Stat: " + Eula.attackStat);
+        System.out.println("Tier: " + Eula.tier);
+        
+        System.out.println("Name: " + Ganyu.name);
+        System.out.println("Attack Stat: " + Ganyu.attackStat);
+        System.out.println("Tier: " + Ganyu.tier);
     }
     
 }

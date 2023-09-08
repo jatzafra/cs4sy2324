@@ -10,5 +10,13 @@ package tr28_zafra_ex01;
  * @author TRUTH
  */
 public class Character {
+    String name;
+    int attackStat;
+    char tier;
     
+    Character(String name, int attackStat, char tier) {
+        this.name = name;
+        this.attackStat = attackStat;
+        this.tier = tier;
+    }
 }
