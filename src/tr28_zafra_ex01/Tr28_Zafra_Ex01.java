@@ -16,21 +16,23 @@ public class Tr28_Zafra_Ex01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here\
-        Character Ayaka = new Character("Ayaka", 342, 'S');
-        Character Eula = new Character("Eula", 342, 'F');
-        Character Ganyu = new Character("Ganyu", 335, 'B');
+        Character ayaka = new Character("Ayaka", 342, 'S');
+        Character eula = new Character("Eula", 342, 'F');
+        Character ganyu = new Character("Ganyu", 335, 'B');
         
-        System.out.println("Name: " + Ayaka.name);
-        System.out.println("Attack Stat: " + Ayaka.attackStat);
-        System.out.println("Tier: " + Ayaka.tier);
+        System.out.println("Name: " + ayaka.name);
+        System.out.println("Attack Stat: " + ayaka.attackStat);
+        System.out.println("Tier: " + ayaka.tier + "\r\n");
+        System.out.println("Name: " + eula.name);
+        System.out.println("Attack Stat: " + eula.attackStat);
+        System.out.println("Tier: " + eula.tier + "\r\n");
+        System.out.println("Name: " + ganyu.name);
+        System.out.println("Attack Stat: " + ganyu.attackStat);
+        System.out.println("Tier: " + ganyu.tier + "\r\n");
         
-        System.out.println("Name: " + Eula.name);
-        System.out.println("Attack Stat: " + Eula.attackStat);
-        System.out.println("Tier: " + Eula.tier);
-        
-        System.out.println("Name: " + Ganyu.name);
-        System.out.println("Attack Stat: " + Ganyu.attackStat);
-        System.out.println("Tier: " + Ganyu.tier);
+        System.out.println("Total attack stat: " + (ayaka.attackStat + eula.attackStat + ganyu.attackStat));
+        System.out.println("Ayaka and Eula have the same attack stat: " + (ayaka.attackStat == eula.attackStat));
+        System.out.println("Eula has a higher tier than Ayaka: " + (eula.tierEquivalent > ayaka.tierEquivalent));
     }
     
 }
