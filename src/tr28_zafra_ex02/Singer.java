@@ -23,8 +23,10 @@ public class Singer {
     public void performForAudience(int n){
         noOfPerformances++;
         earnings += n*100;
+        System.out.println(this.name + " performs for an audience of " + n);
     }
     public void changeFavSong(Song favorite){
         favoriteSong = favorite;
+        System.out.println(this.name + " changes their favorite song to " + this.favoriteSong.title);
     }
 }

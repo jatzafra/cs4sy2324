@@ -22,17 +22,22 @@ public class Tr28_Zafra_Ex02 {
         
         Singer yuPengChen = new Singer("Yu-Peng Chen", 0, 0, moonlikeSmile);
         
-        yuPengChen.performForAudience(12);
-        System.out.println("Name: " + yuPengChen.name);
+        System.out.println("\r\nName: " + yuPengChen.name);
         System.out.println("No. of Performances: " + yuPengChen.noOfPerformances);
         System.out.println("Earnings: " + yuPengChen.earnings);
-        System.out.println("Favorite Song: " + yuPengChen.favoriteSong + "\r\n");
+        System.out.println("Favorite Song: " + yuPengChen.favoriteSong.title + "\r\n");
+        
+        yuPengChen.performForAudience(12);
+        System.out.println("\r\nName: " + yuPengChen.name);
+        System.out.println("No. of Performances: " + yuPengChen.noOfPerformances);
+        System.out.println("Earnings: " + yuPengChen.earnings);
+        System.out.println("Favorite Song: " + yuPengChen.favoriteSong.title + "\r\n");
         
         yuPengChen.changeFavSong(inevitableConflict);
-        System.out.println("Name: " + yuPengChen.name);
+        System.out.println("\r\nName: " + yuPengChen.name);
         System.out.println("No. of Performances: " + yuPengChen.noOfPerformances);
         System.out.println("Earnings: " + yuPengChen.earnings);
-        System.out.println("Favorite Song: " + yuPengChen.favoriteSong);
+        System.out.println("Favorite Song: " + yuPengChen.favoriteSong.title + "\r\n");
         
         
     }
