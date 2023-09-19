@@ -27,11 +27,13 @@ public class Tr28_Zafra_Ex04 {
         paper.setStrongAgainst(rock);
         scissors.setStrongAgainst(paper);
 
-        int roundsToWin = 2, option, playerW = 0, computerW = 0;
+        int roundsToWin = 2, option, playerW, computerW;
         Move playerM = null, computerM = null;
-        boolean gameOngoing = true;
+        boolean runApplication = true, firstRun = true;
         
-        while(true) {
+        while(runApplication) {
+            playerW = computerW = 0;
+            
             System.out.println("Welcome to Rock, Paper, Scissors. Please choose an option:");
             System.out.println("1. Start game");
             System.out.println("2. Change number of rounds");
@@ -42,10 +44,7 @@ public class Tr28_Zafra_Ex04 {
                 case 1:
                     System.out.println("\r\nThis match will be first to " + roundsToWin + " wins.");
                     
-                    while(gameOngoing) {
-                        if(!(playerW == 0 && computerW == 0)){
-                            System.out.println("Player: " + playerW + " - Computer: " + computerW);
-                        }
+                    while(true) {
                         if(playerW == roundsToWin || computerW == roundsToWin){
                             break;
                         }
@@ -55,7 +54,8 @@ public class Tr28_Zafra_Ex04 {
                         System.out.println("2. Paper");
                         System.out.println("3. Scissors");
                         option = sc.nextInt();
-
+                        
+                        firstRun = false;
                         int random = (int) Math.floor(Math.random()*3) + 1;
 
                         switch(random){
@@ -83,31 +83,40 @@ public class Tr28_Zafra_Ex04 {
 
                         switch(Move.compareMoves(playerM, computerM)){
                             case 0:
-                                System.out.println("\r\nPlayer chose " + playerM.getName() + ". Computer chose " + computerM.getName() + ". Player wins round!");
+                                System.out.print("\r\nPlayer chose " + playerM.getName() + ". Computer chose ");
+                                System.out.println(computerM.getName() + ". Player wins round! ");
                                 playerW++;
                                 break;
                             case 1:
-                                System.out.println("\r\nPlayer chose " + playerM.getName() + ". Computer chose " + computerM.getName() + ". Computer wins round!");
+                                System.out.print("\r\nPlayer chose " + playerM.getName() + ". Computer chose ");
+                                System.out.println(computerM.getName() + ". Computer wins round! ");
                                 computerW++;
                                 break;
                             case 2:
-                                System.out.println("\r\nPlayer chose " + playerM.getName() + ". Computer chose " + computerM.getName() + ". Round is tied!");
+                                System.out.print("\r\nPlayer chose " + playerM.getName() + ". Computer chose ");
+                                System.out.println(computerM.getName() + ". Round is tied! ");
                                 break;
                         }
+                        
+                        System.out.println("Player: " + playerW + " - Computer: " + computerW + "\r\n");
                     } 
                     if(playerW == roundsToWin) {
-                        System.out.println("Player wins!");
+                        System.out.println("Player wins!\r\n");
                     }
                     else{
-                        System.out.println("Computer wins!");
+                        System.out.println("Computer wins!\r\n");
                     }
                     
                     break;
                 case 2:
+                    System.out.println("\nHow many wins are needed to win a match?");
+                    roundsToWin = sc.nextInt();
                     
+                    System.out.println("\nNew settings has been saved!");
                     break;
                 case 3:
-                    
+                    System.out.println("\nThank you for playing!");
+                    runApplication = false;
                     break;
             }
         }
