@@ -4,8 +4,6 @@
  */
 package lecture_array;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author TRUTH
@@ -24,11 +22,10 @@ public class main {
         stringList[3] = "Hola";
         stringList = new String[10]; //changes stringList
         char[][] charGrid = new char[3][3]; //you can make multi-demnsional arrays
-        ArrayList<Person> personList = new ArrayList();
         Person a = new Person("Joe");
         Person b = new Person("Jane");
-        personList.add(a);
-        personList.add(b);
+        Person.addPerson(a);
+        Person.addPerson(b);
         System.out.println(Person.getPerson(0));
     }
     
