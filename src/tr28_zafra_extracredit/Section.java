@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author TRUTH
  */
 public class Section {
-    private String name;
+    private final String name;
     private ArrayList<Student> students;
     
     public Section(String name){
@@ -19,6 +19,12 @@ public class Section {
         this.students = new ArrayList();
     }
     
+    public String getName(){
+        return name;
+    }
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
     public void addStudent(Student s){
         students.add(s);
     }

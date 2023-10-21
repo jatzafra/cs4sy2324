@@ -9,11 +9,18 @@ package tr28_zafra_extracredit;
  * @author TRUTH
  */
 public class Assignment {
-    private String name;
-    private double timeAlloted;
+    private final String name;
+    private final double timeAlloted;
     
     public Assignment(String name, double time){
         this.name = name;
         this.timeAlloted = time;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    public double getTimeAlloted(){
+        return timeAlloted;
     }
 }

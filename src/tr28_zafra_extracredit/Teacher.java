@@ -11,8 +11,7 @@ import java.util.ArrayList;
  * @author TRUTH
  */
 public class Teacher {
-    private String name;
-    private String subject;
+    private final String name, subject;
     private ArrayList<Section> sections;
     
     public Teacher(String name, String subj){
@@ -21,12 +20,23 @@ public class Teacher {
         this.sections = new ArrayList();
     }
     
+    public String getName(){
+        return name;
+    }
+    public String getSubject(){
+        return subject;
+    }
+    public ArrayList<Section> getSections(){
+        return sections;
+    }
     public void addSection(Section s){
         sections.add(s);
     }
     public void giveAssignment(Assignment a){
-        for(Section s : sections){
-            for(Student stud : s.)
+        for(Section sect : sections){
+            for(Student stud : sect.getStudents()){
+                stud.addAssignment(a); 
+           }
         }
     }
 }

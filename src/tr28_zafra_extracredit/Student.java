@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author TRUTH
  */
 public class Student {
-    private String name;
+    private final String name;
     private ArrayList<Assignment> assignments;
     
     public Student(String name){
@@ -19,12 +19,24 @@ public class Student {
         this.assignments = new ArrayList();
     }
     
-    public void finishAssignment(Assignment a){
-        
+    public String getName(){
+        return name;
     }
-    public getTimeNeeded(){
+    public ArrayList<Assignment> getAssignments(){
+        return assignments;
+    }
+    public void addAssignment(Assignment a){
+        assignments.add(a);
+    }
+    public void finishAssignment(Assignment a){
+        assignments.remove(a);
+    }
+    public double getTimeNeeded(){
+        double totalTime = 0;
+        for(Assignment assi : assignments){
+            totalTime += assi.getTimeAlloted();
+        }
         
-        
-        return 
+        return totalTime;
     }
 }
