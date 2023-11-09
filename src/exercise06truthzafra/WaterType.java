@@ -9,5 +9,15 @@ package exercise06truthzafra;
  * @author TRUTH
  */
 public class WaterType extends Monster{
-    
+    public WaterType(String n, int m, int base){
+        super(n, "water", "fire", "grass", m, base);
+        atk *= 0.7;
+        def *= 1.3;
+    }
+    @Override
+    public void special(){
+        System.out.println(name + " used its special attack.");
+        def += 2;
+        hp -= 0.1*maxHP;
+    }
 }

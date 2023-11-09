@@ -10,23 +10,13 @@ package exercise06truthzafra;
  */
 public class FireType extends Monster{
     public FireType(String n, int m, int base){
-        name = n;
-        type = "fire";
-        strongAgainst = "water";
-        weakAgainst = "grass";
-        maxHP = m;
-        hp = m;
-        atk = 1.3 * base;
-        def = 0.7 * base;
-        xp = 0;
-        lvl = 1;
-        monsterList.add(this);
-        guard = false;
-        charge = false;
+        super(n, "fire", "water", "grass", m, base);
+        atk *= 1.3;
+        def *= 0.7;
     }
     @Override
     public void special(){
-        System.out.println(name + " ");
+        System.out.println(name + " used its special attack.");
         atk += 2;
         hp -= 0.1*maxHP;
     }

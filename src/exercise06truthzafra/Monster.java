@@ -90,7 +90,7 @@ public class Monster {
     public void rest(){
         hp += maxHP * 0.15;
         if(hp > maxHP) hp = maxHP;
-        System.out.println(name + " rested. It's health is now " + hp + ".");
+        System.out.println(name + " rested. Its health is now " + hp + ".");
     }
 
     public void special(){
