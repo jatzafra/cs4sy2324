@@ -37,6 +37,7 @@ public class Character {
                 break;
             case 'E':
                 tierEquivalent = 1;
+                break;
             case 'F':
                 tierEquivalent = 0;
         }
