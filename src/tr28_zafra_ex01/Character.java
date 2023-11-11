@@ -38,6 +38,7 @@ public class Character {
                 break;
             case 'E':
                 this.tierEquivalent = 1;
+                break;
             case 'F':
                 this.tierEquivalent = 0;
         }
