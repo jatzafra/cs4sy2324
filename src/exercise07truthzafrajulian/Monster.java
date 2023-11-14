@@ -1,8 +1,8 @@
-package exercise06truthzafra;
+package exercise07truthzafrajulian;
 
 import java.util.ArrayList;
 
-public class Monster {
+public abstract class Monster implements Interactive {
     protected final String name, type, strongAgainst, weakAgainst;
     protected int maxHP, hp, atk, def, xp, lvl;
     protected boolean guard, charge;
@@ -113,6 +113,9 @@ public class Monster {
             def += 2;
             System.out.println(name + " levelled up to " + lvl + "!");
         }
+    }
+    public void interact(){
+        System.out.println("This monster is named " + name + " and is a " + type + " type.");
     }
 
 }
