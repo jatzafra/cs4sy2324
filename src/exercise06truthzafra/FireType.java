@@ -10,7 +10,7 @@ package exercise06truthzafra;
  */
 public class FireType extends Monster{
     public FireType(String n, int m, int base){
-        super(n, "fire", "water", "grass", m, base);
+        super(n, "fire", "grass", "water", m, base);
         atk *= 1.3;
         def *= 0.7;
     }

@@ -19,10 +19,32 @@ public class main {
         WaterType primarina = new WaterType("Primarina", 44, 25);
         GrassType decidueye = new GrassType("Decidueye", 70, 30);
         
+        //grass vs fire
+        while(decidueye.getHP() > 0 && incineroar.getHP() > 0){
+            decidueye.attack(incineroar);
+            if(!(decidueye.getHP() > 0 && incineroar.getHP() > 0)) break;
+            incineroar.attack(decidueye);
+        }
+        decidueye.resetHealth();
+        incineroar.resetHealth();
+        
+        //fire vs water
+        while(incineroar.getHP() > 0 && primarina.getHP() > 0){
+            incineroar.attack(primarina);
+            if(!(incineroar.getHP() > 0 && primarina.getHP() > 0)) break;
+            primarina.attack(incineroar);
+        }
+        incineroar.resetHealth();
+        primarina.resetHealth();
+        
+        //water vs grass
         while(primarina.getHP() > 0 && decidueye.getHP() > 0){
             primarina.attack(decidueye);
+            if(!(primarina.getHP() > 0 && decidueye.getHP() > 0)) break;
             decidueye.attack(primarina);
         }
+        primarina.resetHealth();
+        decidueye.resetHealth();
     }
     
 }
