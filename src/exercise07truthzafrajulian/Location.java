@@ -30,6 +30,7 @@ public class Location implements Interactive {
     public void removePerson(Character c){
         personList.remove(c);
     }
+    @Override
     public void interact(){
         System.out.println("The specialty of " + name + " is " + localSpecialty + ".");
     }

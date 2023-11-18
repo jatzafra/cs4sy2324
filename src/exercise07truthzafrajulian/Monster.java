@@ -114,6 +114,7 @@ public abstract class Monster implements Interactive {
             System.out.println(name + " levelled up to " + lvl + "!");
         }
     }
+    @Override
     public void interact(){
         System.out.println("This monster is named " + name + " and is a " + type + " type.");
     }
