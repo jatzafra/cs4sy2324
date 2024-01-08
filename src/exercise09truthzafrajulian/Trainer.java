@@ -47,7 +47,7 @@ public class Trainer {
         }
         
         team.add(m);
-        System.out.printf("%s was successfully captured.", m.getName());
+        System.out.printf("%s was successfully captured.%n", m.getName());
     }
     public void release(Monster m) throws NotInTeamException{
         if(!(team.contains(m))){
@@ -55,6 +55,6 @@ public class Trainer {
         }
         
         team.remove(m);
-        System.out.printf("%s was released from the team.", m.getName());
+        System.out.printf("%s was released from the team.%n", m.getName());
     }
 }
