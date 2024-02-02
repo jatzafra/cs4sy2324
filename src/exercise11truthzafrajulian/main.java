@@ -32,12 +32,16 @@ public class main {
         
         JLabel name = new JLabel(displayedSubject.getName());
         ImageIcon logo = new ImageIcon(main.class.getResource(displayedSubject.getImgFileName()));
-        JLabel units = new JLabel((String) displayeSubject.getUnits());
-        JLabel grade = new JLabel((String) displayedSubject.getGrade());
+        JLabel img = new JLabel();
+        img.setIcon(logo);
+        JLabel units = new JLabel(Double.toString(displayedSubject.getUnits()));
+        JLabel grade = new JLabel(Double.toString(displayedSubject.getGrade()));
         
         
         window.add(name);
-        window.setIconImage(logo);
+        window.add(img);
+        window.add(units);
+        window.add(grade);
         
         window.setVisible(true);
     }
